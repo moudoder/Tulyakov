@@ -11,6 +11,13 @@ $(document).ready(function () {
     
   });
 
+  $(".scrol-to").on("click", function (event) {
+    event.preventDefault();
+    let id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+
   $('.stages-slider').slick({
     infinite: true,
     slidesToShow: 4,
